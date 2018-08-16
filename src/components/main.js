@@ -20,7 +20,7 @@ class Todo extends Component {
     let notesArr = this.state.notes;
     notesArr.push(this.state.noteText)
     this.setState({noteText: ''})
-    this.textInout.focus();
+    this.textInput.focus();
   }
 
   handleKeyUp(e) {
@@ -52,7 +52,7 @@ class Todo extends Component {
         <div className="btn" onClick={() => this.addNote()}>+</div>
 
         <input type="text"
-          ref={((input) => {this.textInout = input})}
+          ref={((input) => {this.textInput = input})}
           className="textInput"
           value={this.state.noteText}
           onChange={noteText => this.updateNoteText(noteText)}
