@@ -9,6 +9,8 @@ export default function todos(state = [], action) {
       ];
     case 'TOGGLE_TODO':
       return state.map(t => todo(t, action));
+    case 'REMOVE_TODO':
+      return state.filter(t => todo(t, action))
     default:
       return state;
   }

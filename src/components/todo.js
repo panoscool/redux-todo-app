@@ -7,7 +7,7 @@ const Todo = ({ onClick, completed, text, removeTodo }) => (
       textDecoration: completed ? 'line-through' : 'none'
     }}
   >
-  <button className="btn btn-remove" onClick={() => removeTodo}>Remove</button>
+  <button className="btn btn-remove" onClick={() => removeTodo(todo.id)}>Remove</button>
     {text}
   </li>
 )
