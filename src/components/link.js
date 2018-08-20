@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Link = ({ active, children, onClick }) => (
-  <button
+  <button className="btn filter"
      onClick={onClick}
      disabled={active}
      style={{

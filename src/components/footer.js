@@ -3,7 +3,7 @@ import FilterLink from '../containers/filter_link';
 import { VisibilityFilters } from '../redux/actions';
 
 const Footer = () => (
-  <div>
+  <div className="footer">
     <span>Show: </span>
     <FilterLink filter={VisibilityFilters.SHOW_ALL}>
       All
