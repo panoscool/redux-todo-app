@@ -1,17 +1,25 @@
-import todo from './todo';
-
-export default function todos(state = [], action) {
+const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
         ...state,
-        todo(undefined, action) 
-      ];
+        {
+          id: action.id,
+          text: action.text,
+          completed: false
+        }
+      ]
     case 'TOGGLE_TODO':
-      return state.map(t => todo(t, action));
+      return state.map(todo =>
+        (todo.id === action.id)
+          ? {...todo, completed: !todo.completed}
+          : todo
+      )
     case 'REMOVE_TODO':
-      return state.filter(t => todo(t, action))
+      return state.slice(action.id, 1)
     default:
-      return state;
+      return state
   }
 }
+
+export default todos;
