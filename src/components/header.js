@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div className="header">
-            <h1>React Todo App</h1>
+            <h1>Redux Todo App</h1>
         </div>
     )
 }

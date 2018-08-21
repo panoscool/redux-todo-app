@@ -16,7 +16,8 @@ const todos = (state = [], action) => {
           : todo
       )
     case 'REMOVE_TODO':
-      return state.slice(action.id, 1)
+    const newState = state.slice(parseInt(action.id),1)
+      return newState
     default:
       return state
   }
