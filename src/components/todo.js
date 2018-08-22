@@ -1,16 +1,16 @@
 import React from "react";
 
-const Todo = ({ toggle, completed, text, remove }) => (
+const Todo = ({ todo, onToggle, onRemove }) => (
   <li
-    onClick={toggle}
+    onClick={onToggle}
     style={{
-      textDecoration: completed ? "line-through" : "none"
+      textDecoration: todo.completed ? "line-through" : "none"
     }}
   >
-    <button className="btn btn-remove" onClick={remove}>
+    <button className="btn btn-remove" onClick={onRemove}>
       Remove
     </button>
-    {text}
+    {todo.text}
   </li>
 );
 
