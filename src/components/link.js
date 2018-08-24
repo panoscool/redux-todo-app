@@ -1,9 +1,9 @@
 import React from "react";
 
-const Link = ({ active, children, onClick }) => (
+const Link = ({ active, children, onFilter }) => (
   <button
     className="btn filter"
-    onClick={onClick}
+    onClick={onFilter}
     disabled={active}
     style={{
       marginLeft: "4px"
